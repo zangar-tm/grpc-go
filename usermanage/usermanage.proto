@@ -6,7 +6,7 @@ option go_package = "github.com/zangar-tm/grpc-go;grpc_go";
 
 service UserManagement{
     rpc CreateNewUser (NewUser) returns (User){}
-    rpc GetUsers (GetUsersParams) returns (UserList){}
+    rpc GetUsers (GetUsersParams) returns (UsersList){}
 }
 
 message NewUser {
@@ -24,6 +24,6 @@ message GetUsersParams{
 
 }
 
-message UserList{
+message UsersList{
     repeated User Users = 1;
 }
